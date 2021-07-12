@@ -16,7 +16,7 @@ ADD   https://github.com/RedHatTraining/DO288-apps/releases/download/OCP-4.1-1/h
 
 COPY  run-app.sh /opt/app-root/bin/
 
-RUN   chmod 755 /opt/app-root/bin/run-app.sh
+RUN   chmod 755 /opt/app-root/bin/run-app.sh && chmod 755 /opt/app-root/bin/hello-java.jar
 
 EXPOSE 8080
 
