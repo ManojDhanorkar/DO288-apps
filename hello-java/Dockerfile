@@ -20,9 +20,9 @@ COPY  run-app.sh /opt/app-root/bin/
 RUN   chown -R wildfly:wildfly /opt/app-root && \
       chmod -R 700 /opt/app-root
 
-USER 1001
+USER wildfly
 
-EXPOSE wildfly
+EXPOSE 8080
 
 # Run the fat JAR   
 ENTRYPOINT ["sh", "/opt/app-root/bin/run-app.sh"]
